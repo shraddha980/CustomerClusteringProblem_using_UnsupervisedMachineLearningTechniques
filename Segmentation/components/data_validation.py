@@ -109,7 +109,7 @@ class DataValidation:
     def initiate_data_validation(self)->artifact_entity.DataValidationArtifact:
         try:
             logging.info(f"Reading base dataframe")
-            base_df = pd.read_csv(r"E:\Customer_Segmenation_Shraddha\bank-additional-full.csv", sep=';')
+            base_df = pd.read_csv(r"/config/Customer_Segmentation_/bank-additional-full.csv", sep=';')
             base_df.replace({"na":np.NAN},inplace=True)
             logging.info(f"Replace na value in base df")
             #base_df has na as null

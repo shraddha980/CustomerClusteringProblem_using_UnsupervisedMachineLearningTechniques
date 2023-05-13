@@ -1,0 +1,289 @@
+[2023-05-13 14:57:46,116] root - INFO - Exporting collection data as pandas dataframe
+[2023-05-13 14:57:46,116] root - INFO - Reading data from database: CUSTOMERS and collection: CUSTOMERS_PROJECT
+[2023-05-13 14:57:49,518] root - INFO - Found columns: Index(['_id', 'age', 'job', 'marital', 'education', 'default', 'housing',
+       'loan', 'contact', 'month', 'day_of_week', 'duration', 'campaign',
+       'pdays', 'previous', 'poutcome', 'emp.var.rate', 'cons.price.idx',
+       'cons.conf.idx', 'euribor3m', 'nr.employed', 'y'],
+      dtype='object')
+[2023-05-13 14:57:49,519] root - INFO - Dropping column: _id 
+[2023-05-13 14:57:49,572] root - INFO - Row and columns in df: (123564, 21)
+[2023-05-13 14:57:49,572] root - INFO - Save data in feature store
+[2023-05-13 14:57:49,860] root - INFO - Create feature store folder if not available
+[2023-05-13 14:57:49,860] root - INFO - Save df to feature store folder
+[2023-05-13 14:57:50,985] root - INFO - split dataset into train and test set
+[2023-05-13 14:57:51,051] root - INFO - create dataset directory folder if not available
+[2023-05-13 14:57:51,051] root - INFO - Save df to feature store folder
+[2023-05-13 14:57:52,296] root - INFO - Data ingestion artifact: DataIngestionArtifact(feature_store_file_path='/config/Customer_Segmentation_/artifact/05132023__145746/data_ingestion/feature_store/bank-additional-full.csv', train_file_path='/config/Customer_Segmentation_/artifact/05132023__145746/data_ingestion/dataset/train.csv', test_file_path='/config/Customer_Segmentation_/artifact/05132023__145746/data_ingestion/dataset/test.csv')
+[2023-05-13 14:57:52,432] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-05-13 14:57:52,432] root - INFO - Reading base dataframe
+[2023-05-13 14:57:52,550] root - INFO - Replace na value in base df
+[2023-05-13 14:57:52,550] root - INFO - Drop null values colums from base df
+[2023-05-13 14:57:52,568] root - INFO - selecting column name which contains null above to 0.2
+[2023-05-13 14:57:52,569] root - INFO - Columns to drop: []
+[2023-05-13 14:57:52,574] root - INFO - Reading train dataframe
+[2023-05-13 14:57:52,751] root - INFO - Reading test dataframe
+[2023-05-13 14:57:52,795] root - INFO - Drop null values colums from train df
+[2023-05-13 14:57:52,836] root - INFO - selecting column name which contains null above to 0.2
+[2023-05-13 14:57:52,836] root - INFO - Columns to drop: []
+[2023-05-13 14:57:52,847] root - INFO - Drop null values colums from test df
+[2023-05-13 14:57:52,858] root - INFO - selecting column name which contains null above to 0.2
+[2023-05-13 14:57:52,858] root - INFO - Columns to drop: []
+[2023-05-13 14:57:52,861] root - INFO - Converting categorical Columns to Numerical
+[2023-05-13 14:57:52,980] root - INFO - Converting base columns to encoded columns:    age  duration  campaign  pdays  ...  day_of_week_wed  poutcome_failure  poutcome_nonexistent  poutcome_success
+0   56       261         1    999  ...            False             False                  True             False
+1   57       149         1    999  ...            False             False                  True             False
+2   37       226         1    999  ...            False             False                  True             False
+3   40       151         1    999  ...            False             False                  True             False
+4   56       307         1    999  ...            False             False                  True             False
+5   45       198         1    999  ...            False             False                  True             False
+6   59       139         1    999  ...            False             False                  True             False
+7   41       217         1    999  ...            False             False                  True             False
+8   24       380         1    999  ...            False             False                  True             False
+9   25        50         1    999  ...            False             False                  True             False
+
+[10 rows x 63 columns]
+[2023-05-13 14:57:52,980] root - INFO - Converting base columns to encoded columns: (41188, 63)
+[2023-05-13 14:57:53,151] root - INFO - Converting train columns to encoded columns:    age  duration  campaign  pdays  ...  day_of_week_wed  poutcome_failure  poutcome_nonexistent  poutcome_success
+0   30       114         2    999  ...            False             False                  True             False
+1   33       391         1    999  ...             True             False                  True             False
+2   49       133         5    999  ...            False             False                  True             False
+3   31       207         1    999  ...             True              True                 False             False
+4   41       772         2    999  ...            False              True                 False             False
+5   57       554         2    999  ...            False             False                  True             False
+6   40       156         5    999  ...             True              True                 False             False
+7   55       219         1    999  ...             True             False                  True             False
+8   28       200         1    999  ...             True             False                  True             False
+9   30        49         1    999  ...            False             False                  True             False
+
+[10 rows x 63 columns]
+[2023-05-13 14:57:53,151] root - INFO - Converting base columns to encoded columns: (41188, 63)
+[2023-05-13 14:57:53,246] root - INFO - Converting test columns to encoded columns:    age  duration  campaign  pdays  ...  day_of_week_wed  poutcome_failure  poutcome_nonexistent  poutcome_success
+0   29       111         4    999  ...             True             False                  True             False
+1   35       136         2    999  ...            False             False                  True             False
+2   56       394         3    999  ...            False             False                  True             False
+3   36       178         1    999  ...            False             False                  True             False
+4   33        76         2    999  ...            False             False                  True             False
+5   34        76         2    999  ...            False              True                 False             False
+6   32        55         1    999  ...            False             False                  True             False
+7   28       260         2    999  ...            False             False                  True             False
+8   38        17         6    999  ...            False             False                  True             False
+9   46       746         4    999  ...            False             False                  True             False
+
+[10 rows x 63 columns]
+[2023-05-13 14:57:53,246] root - INFO - Converting base columns to encoded columns: (41188, 63)
+[2023-05-13 14:57:53,327] root - INFO - Is all required columns present in train df
+[2023-05-13 14:57:53,327] root - INFO - Is all required columns present in test df
+[2023-05-13 14:57:53,328] root - INFO - As all column are available in train df hence detecting data drift
+[2023-05-13 14:57:53,328] root - INFO - Hypothesis age: float64, float64 
+[2023-05-13 14:57:53,401] root - INFO - Hypothesis duration: float64, float64 
+[2023-05-13 14:57:53,419] root - INFO - Hypothesis campaign: float64, float64 
+[2023-05-13 14:57:53,487] root - INFO - Hypothesis pdays: float64, float64 
+[2023-05-13 14:57:53,549] root - INFO - Hypothesis previous: float64, float64 
+[2023-05-13 14:57:53,616] root - INFO - Hypothesis emp.var.rate: float64, float64 
+[2023-05-13 14:57:53,684] root - INFO - Hypothesis cons.price.idx: float64, float64 
+[2023-05-13 14:57:53,752] root - INFO - Hypothesis cons.conf.idx: float64, float64 
+[2023-05-13 14:57:53,824] root - INFO - Hypothesis euribor3m: float64, float64 
+[2023-05-13 14:57:53,898] root - INFO - Hypothesis nr.employed: float64, float64 
+[2023-05-13 14:57:53,966] root - INFO - Hypothesis job_admin.: float64, float64 
+[2023-05-13 14:57:54,032] root - INFO - Hypothesis job_blue-collar: float64, float64 
+[2023-05-13 14:57:54,102] root - INFO - Hypothesis job_entrepreneur: float64, float64 
+[2023-05-13 14:57:54,169] root - INFO - Hypothesis job_housemaid: float64, float64 
+[2023-05-13 14:57:54,236] root - INFO - Hypothesis job_management: float64, float64 
+[2023-05-13 14:57:54,303] root - INFO - Hypothesis job_retired: float64, float64 
+[2023-05-13 14:57:54,369] root - INFO - Hypothesis job_self-employed: float64, float64 
+[2023-05-13 14:57:54,378] root - INFO - Hypothesis job_services: float64, float64 
+[2023-05-13 14:57:54,445] root - INFO - Hypothesis job_student: float64, float64 
+[2023-05-13 14:57:54,512] root - INFO - Hypothesis job_technician: float64, float64 
+[2023-05-13 14:57:54,578] root - INFO - Hypothesis job_unemployed: float64, float64 
+[2023-05-13 14:57:54,645] root - INFO - Hypothesis job_unknown: float64, float64 
+[2023-05-13 14:57:54,711] root - INFO - Hypothesis marital_divorced: float64, float64 
+[2023-05-13 14:57:54,778] root - INFO - Hypothesis marital_married: float64, float64 
+[2023-05-13 14:57:54,846] root - INFO - Hypothesis marital_single: float64, float64 
+[2023-05-13 14:57:54,913] root - INFO - Hypothesis marital_unknown: float64, float64 
+[2023-05-13 14:57:54,978] root - INFO - Hypothesis education_basic.4y: float64, float64 
+[2023-05-13 14:57:55,045] root - INFO - Hypothesis education_basic.6y: float64, float64 
+[2023-05-13 14:57:55,115] root - INFO - Hypothesis education_basic.9y: float64, float64 
+[2023-05-13 14:57:55,185] root - INFO - Hypothesis education_high.school: float64, float64 
+[2023-05-13 14:57:55,253] root - INFO - Hypothesis education_illiterate: float64, float64 
+[2023-05-13 14:57:55,317] root - INFO - Hypothesis education_professional.course: float64, float64 
+[2023-05-13 14:57:55,386] root - INFO - Hypothesis education_university.degree: float64, float64 
+[2023-05-13 14:57:55,453] root - INFO - Hypothesis education_unknown: float64, float64 
+[2023-05-13 14:57:55,518] root - INFO - Hypothesis default_no: float64, float64 
+[2023-05-13 14:57:55,584] root - INFO - Hypothesis default_unknown: float64, float64 
+[2023-05-13 14:57:55,652] root - INFO - Hypothesis default_yes: float64, float64 
+[2023-05-13 14:57:55,658] root - INFO - Hypothesis housing_no: float64, float64 
+[2023-05-13 14:57:55,724] root - INFO - Hypothesis housing_unknown: float64, float64 
+[2023-05-13 14:57:55,793] root - INFO - Hypothesis housing_yes: float64, float64 
+[2023-05-13 14:57:55,860] root - INFO - Hypothesis loan_no: float64, float64 
+[2023-05-13 14:57:55,925] root - INFO - Hypothesis loan_unknown: float64, float64 
+[2023-05-13 14:57:55,996] root - INFO - Hypothesis loan_yes: float64, float64 
+[2023-05-13 14:57:56,068] root - INFO - Hypothesis contact_cellular: float64, float64 
+[2023-05-13 14:57:56,134] root - INFO - Hypothesis contact_telephone: float64, float64 
+[2023-05-13 14:57:56,201] root - INFO - Hypothesis month_apr: float64, float64 
+[2023-05-13 14:57:56,268] root - INFO - Hypothesis month_aug: float64, float64 
+[2023-05-13 14:57:56,335] root - INFO - Hypothesis month_dec: float64, float64 
+[2023-05-13 14:57:56,399] root - INFO - Hypothesis month_jul: float64, float64 
+[2023-05-13 14:57:56,465] root - INFO - Hypothesis month_jun: float64, float64 
+[2023-05-13 14:57:56,531] root - INFO - Hypothesis month_mar: float64, float64 
+[2023-05-13 14:57:56,598] root - INFO - Hypothesis month_may: float64, float64 
+[2023-05-13 14:57:56,666] root - INFO - Hypothesis month_nov: float64, float64 
+[2023-05-13 14:57:56,737] root - INFO - Hypothesis month_oct: float64, float64 
+[2023-05-13 14:57:56,806] root - INFO - Hypothesis month_sep: float64, float64 
+[2023-05-13 14:57:56,872] root - INFO - Hypothesis day_of_week_fri: float64, float64 
+[2023-05-13 14:57:56,881] root - INFO - Hypothesis day_of_week_mon: float64, float64 
+[2023-05-13 14:57:56,948] root - INFO - Hypothesis day_of_week_thu: float64, float64 
+[2023-05-13 14:57:57,016] root - INFO - Hypothesis day_of_week_tue: float64, float64 
+[2023-05-13 14:57:57,083] root - INFO - Hypothesis day_of_week_wed: float64, float64 
+[2023-05-13 14:57:57,151] root - INFO - Hypothesis poutcome_failure: float64, float64 
+[2023-05-13 14:57:57,218] root - INFO - Hypothesis poutcome_nonexistent: float64, float64 
+[2023-05-13 14:57:57,282] root - INFO - Hypothesis poutcome_success: float64, float64 
+[2023-05-13 14:57:57,347] root - INFO - As all column are available in test df hence detecting data drift
+[2023-05-13 14:57:57,347] root - INFO - Hypothesis age: float64, float64 
+[2023-05-13 14:57:57,354] root - INFO - Hypothesis duration: float64, float64 
+[2023-05-13 14:57:57,363] root - INFO - Hypothesis campaign: float64, float64 
+[2023-05-13 14:57:57,369] root - INFO - Hypothesis pdays: float64, float64 
+[2023-05-13 14:57:57,404] root - INFO - Hypothesis previous: float64, float64 
+[2023-05-13 14:57:57,409] root - INFO - Hypothesis emp.var.rate: float64, float64 
+[2023-05-13 14:57:57,413] root - INFO - Hypothesis cons.price.idx: float64, float64 
+[2023-05-13 14:57:57,418] root - INFO - Hypothesis cons.conf.idx: float64, float64 
+[2023-05-13 14:57:57,424] root - INFO - Hypothesis euribor3m: float64, float64 
+[2023-05-13 14:57:57,429] root - INFO - Hypothesis nr.employed: float64, float64 
+[2023-05-13 14:57:57,434] root - INFO - Hypothesis job_admin.: float64, float64 
+[2023-05-13 14:57:57,469] root - INFO - Hypothesis job_blue-collar: float64, float64 
+[2023-05-13 14:57:57,504] root - INFO - Hypothesis job_entrepreneur: float64, float64 
+[2023-05-13 14:57:57,538] root - INFO - Hypothesis job_housemaid: float64, float64 
+[2023-05-13 14:57:57,575] root - INFO - Hypothesis job_management: float64, float64 
+[2023-05-13 14:57:57,610] root - INFO - Hypothesis job_retired: float64, float64 
+[2023-05-13 14:57:57,647] root - INFO - Hypothesis job_self-employed: float64, float64 
+[2023-05-13 14:57:57,652] root - INFO - Hypothesis job_services: float64, float64 
+[2023-05-13 14:57:57,688] root - INFO - Hypothesis job_student: float64, float64 
+[2023-05-13 14:57:57,723] root - INFO - Hypothesis job_technician: float64, float64 
+[2023-05-13 14:57:57,759] root - INFO - Hypothesis job_unemployed: float64, float64 
+[2023-05-13 14:57:57,763] root - INFO - Hypothesis job_unknown: float64, float64 
+[2023-05-13 14:57:57,797] root - INFO - Hypothesis marital_divorced: float64, float64 
+[2023-05-13 14:57:57,802] root - INFO - Hypothesis marital_married: float64, float64 
+[2023-05-13 14:57:57,838] root - INFO - Hypothesis marital_single: float64, float64 
+[2023-05-13 14:57:57,873] root - INFO - Hypothesis marital_unknown: float64, float64 
+[2023-05-13 14:57:57,907] root - INFO - Hypothesis education_basic.4y: float64, float64 
+[2023-05-13 14:57:57,942] root - INFO - Hypothesis education_basic.6y: float64, float64 
+[2023-05-13 14:57:57,978] root - INFO - Hypothesis education_basic.9y: float64, float64 
+[2023-05-13 14:57:58,015] root - INFO - Hypothesis education_high.school: float64, float64 
+[2023-05-13 14:57:58,054] root - INFO - Hypothesis education_illiterate: float64, float64 
+[2023-05-13 14:57:58,088] root - INFO - Hypothesis education_professional.course: float64, float64 
+[2023-05-13 14:57:58,123] root - INFO - Hypothesis education_university.degree: float64, float64 
+[2023-05-13 14:57:58,159] root - INFO - Hypothesis education_unknown: float64, float64 
+[2023-05-13 14:57:58,194] root - INFO - Hypothesis default_no: float64, float64 
+[2023-05-13 14:57:58,198] root - INFO - Hypothesis default_unknown: float64, float64 
+[2023-05-13 14:57:58,203] root - INFO - Hypothesis default_yes: float64, float64 
+[2023-05-13 14:57:58,206] root - INFO - Hypothesis housing_no: float64, float64 
+[2023-05-13 14:57:58,242] root - INFO - Hypothesis housing_unknown: float64, float64 
+[2023-05-13 14:57:58,277] root - INFO - Hypothesis housing_yes: float64, float64 
+[2023-05-13 14:57:58,313] root - INFO - Hypothesis loan_no: float64, float64 
+[2023-05-13 14:57:58,347] root - INFO - Hypothesis loan_unknown: float64, float64 
+[2023-05-13 14:57:58,382] root - INFO - Hypothesis loan_yes: float64, float64 
+[2023-05-13 14:57:58,419] root - INFO - Hypothesis contact_cellular: float64, float64 
+[2023-05-13 14:57:58,455] root - INFO - Hypothesis contact_telephone: float64, float64 
+[2023-05-13 14:57:58,491] root - INFO - Hypothesis month_apr: float64, float64 
+[2023-05-13 14:57:58,527] root - INFO - Hypothesis month_aug: float64, float64 
+[2023-05-13 14:57:58,563] root - INFO - Hypothesis month_dec: float64, float64 
+[2023-05-13 14:57:58,597] root - INFO - Hypothesis month_jul: float64, float64 
+[2023-05-13 14:57:58,632] root - INFO - Hypothesis month_jun: float64, float64 
+[2023-05-13 14:57:58,637] root - INFO - Hypothesis month_mar: float64, float64 
+[2023-05-13 14:57:58,672] root - INFO - Hypothesis month_may: float64, float64 
+[2023-05-13 14:57:58,708] root - INFO - Hypothesis month_nov: float64, float64 
+[2023-05-13 14:57:58,743] root - INFO - Hypothesis month_oct: float64, float64 
+[2023-05-13 14:57:58,778] root - INFO - Hypothesis month_sep: float64, float64 
+[2023-05-13 14:57:58,816] root - INFO - Hypothesis day_of_week_fri: float64, float64 
+[2023-05-13 14:57:58,820] root - INFO - Hypothesis day_of_week_mon: float64, float64 
+[2023-05-13 14:57:58,857] root - INFO - Hypothesis day_of_week_thu: float64, float64 
+[2023-05-13 14:57:58,861] root - INFO - Hypothesis day_of_week_tue: float64, float64 
+[2023-05-13 14:57:58,897] root - INFO - Hypothesis day_of_week_wed: float64, float64 
+[2023-05-13 14:57:58,934] root - INFO - Hypothesis poutcome_failure: float64, float64 
+[2023-05-13 14:57:58,939] root - INFO - Hypothesis poutcome_nonexistent: float64, float64 
+[2023-05-13 14:57:58,942] root - INFO - Hypothesis poutcome_success: float64, float64 
+[2023-05-13 14:57:58,976] root - INFO - Write reprt in yaml file
+[2023-05-13 14:57:59,006] root - INFO - Data validation artifact: DataValidationArtifact(report_file_path='/config/Customer_Segmentation_/artifact/05132023__145746/data_validation/report.yaml')
+[2023-05-13 14:57:59,235] root - INFO -  Train_df:    age          job   marital          education  default  ... cons.price.idx cons.conf.idx euribor3m nr.employed    y
+0   30  blue-collar   married           basic.9y       no  ...         93.994         -36.4     4.860      5191.0   no
+1   33  blue-collar   married           basic.6y       no  ...         93.918         -42.7     4.962      5228.1   no
+2   49   unemployed  divorced  university.degree       no  ...         93.918         -42.7     4.957      5228.1   no
+3   31  blue-collar   married        high.school       no  ...         92.893         -46.2     1.334      5099.1   no
+4   41     services    single        high.school  unknown  ...         92.893         -46.2     1.299      5099.1   no
+5   57       admin.   married  university.degree       no  ...         92.893         -46.2     1.259      5099.1  yes
+6   40   technician   married           basic.6y       no  ...         92.893         -46.2     1.281      5099.1   no
+7   55      unknown   married            unknown  unknown  ...         93.918         -42.7     4.963      5228.1   no
+8   28  blue-collar   married           basic.9y       no  ...         94.465         -41.8     4.962      5228.1   no
+9   30     services  divorced           basic.9y       no  ...         93.994         -36.4     4.860      5191.0   no
+
+[10 rows x 21 columns]
+[2023-05-13 14:57:59,307] root - INFO - Test_df:    age            job   marital            education  default  ... cons.price.idx cons.conf.idx euribor3m nr.employed   y
+0   29       services   married          high.school  unknown  ...         93.918         -42.7     4.957      5228.1  no
+1   35       services    single             basic.9y       no  ...         93.918         -42.7     4.962      5228.1  no
+2   56        retired   married             basic.4y       no  ...         94.465         -41.8     4.961      5228.1  no
+3   36    blue-collar   married          high.school       no  ...         94.465         -41.8     4.967      5228.1  no
+4   33         admin.  divorced    university.degree       no  ...         93.200         -42.0     4.191      5195.8  no
+5   34  self-employed    single  professional.course       no  ...         92.893         -46.2     1.313      5099.1  no
+6   32    blue-collar   married             basic.9y       no  ...         93.200         -42.0     4.153      5195.8  no
+7   28         admin.   married          high.school       no  ...         94.465         -41.8     4.967      5228.1  no
+8   38     technician    single  professional.course       no  ...         93.075         -47.1     1.405      5099.1  no
+9   46    blue-collar   married             basic.9y  unknown  ...         93.918         -42.7     4.966      5228.1  no
+
+[10 rows x 21 columns] 
+[2023-05-13 14:57:59,338] root - INFO -  Input_Feature_Train_df :    age          job   marital          education  ... cons.price.idx cons.conf.idx euribor3m nr.employed
+0   30  blue-collar   married           basic.9y  ...         93.994         -36.4     4.860      5191.0
+1   33  blue-collar   married           basic.6y  ...         93.918         -42.7     4.962      5228.1
+2   49   unemployed  divorced  university.degree  ...         93.918         -42.7     4.957      5228.1
+3   31  blue-collar   married        high.school  ...         92.893         -46.2     1.334      5099.1
+4   41     services    single        high.school  ...         92.893         -46.2     1.299      5099.1
+5   57       admin.   married  university.degree  ...         92.893         -46.2     1.259      5099.1
+6   40   technician   married           basic.6y  ...         92.893         -46.2     1.281      5099.1
+7   55      unknown   married            unknown  ...         93.918         -42.7     4.963      5228.1
+8   28  blue-collar   married           basic.9y  ...         94.465         -41.8     4.962      5228.1
+9   30     services  divorced           basic.9y  ...         93.994         -36.4     4.860      5191.0
+
+[10 rows x 20 columns]
+[2023-05-13 14:57:59,364] root - INFO -  Input_Feature_test_df :     age            job   marital            education  ... cons.price.idx cons.conf.idx euribor3m nr.employed
+0   29       services   married          high.school  ...         93.918         -42.7     4.957      5228.1
+1   35       services    single             basic.9y  ...         93.918         -42.7     4.962      5228.1
+2   56        retired   married             basic.4y  ...         94.465         -41.8     4.961      5228.1
+3   36    blue-collar   married          high.school  ...         94.465         -41.8     4.967      5228.1
+4   33         admin.  divorced    university.degree  ...         93.200         -42.0     4.191      5195.8
+5   34  self-employed    single  professional.course  ...         92.893         -46.2     1.313      5099.1
+6   32    blue-collar   married             basic.9y  ...         93.200         -42.0     4.153      5195.8
+7   28         admin.   married          high.school  ...         94.465         -41.8     4.967      5228.1
+8   38     technician    single  professional.course  ...         93.075         -47.1     1.405      5099.1
+9   46    blue-collar   married             basic.9y  ...         93.918         -42.7     4.966      5228.1
+
+[10 rows x 20 columns]
+[2023-05-13 14:57:59,364] root - INFO -  Target_feature_train_df: (98851,)
+[2023-05-13 14:57:59,364] root - INFO -  Target_feature_test_df :  (24713,)
+[2023-05-13 14:57:59,365] root - INFO - target_feature_train_arr : (98851,)
+[2023-05-13 14:57:59,365] root - INFO - target_feature_test_arr: (24713,)
+[2023-05-13 14:57:59,712] root - INFO - input_feature_train_arr : (98851, 20)
+[2023-05-13 14:57:59,720] root - INFO - input_feature_test_arr: (24713, 20)
+[2023-05-13 14:57:59,770] root - INFO - train_arr: (98851, 21)
+[2023-05-13 14:57:59,782] root - INFO - test_arr: (24713, 21)
+[2023-05-13 14:57:59,939] root - INFO - Entered the save_object method of utils
+[2023-05-13 14:57:59,941] root - INFO - Exited the save_object method of utils
+[2023-05-13 14:57:59,941] root - INFO - Entered the save_object method of utils
+[2023-05-13 14:57:59,942] root - INFO - Exited the save_object method of utils
+[2023-05-13 14:57:59,942] root - INFO - Data_Transformation_Artifact: DataTransformationArtifact(transform_object_path='/config/Customer_Segmentation_/artifact/05132023__145746/data_transformation/transformed/transformer.pkl', transform_train_path='/config/Customer_Segmentation_/artifact/05132023__145746/data_transformation/transformed/train.npz', transform_test_path='/config/Customer_Segmentation_/artifact/05132023__145746/data_transformation/transformed/test.npz', target_encoder_path='/config/Customer_Segmentation_/artifact/05132023__145746/data_transformation/target_encoder/target_encoder.pkl')
+[2023-05-13 14:57:59,971] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Model Trainer <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-05-13 14:57:59,971] root - INFO - Loading train and test array.
+[2023-05-13 14:58:00,132] root - INFO - train_arr : (98851, 21)
+[2023-05-13 14:58:00,183] root - INFO - test_arr: (24713, 21)
+[2023-05-13 14:58:00,183] root - INFO - Splitting input and target feature from both train and test arr.
+[2023-05-13 14:58:00,183] root - INFO - x_train,y_train: (98851, 20),(98851,)
+[2023-05-13 14:58:00,183] root - INFO - x_test,y_test:  (24713, 20),(24713,)
+[2023-05-13 14:58:00,183] root - INFO - Train the model
+[2023-05-13 14:58:01,823] root - INFO - Calculating f1 train score
+[2023-05-13 14:58:01,953] root - INFO - yhat_train: [0 0 0 ... 0 2 0]
+[2023-05-13 14:58:01,954] root - INFO - Calculating f1 test score
+[2023-05-13 14:58:01,982] root - INFO - yhat_test : [0 0 0 ... 0 2 2]
+[2023-05-13 14:58:01,983] root - INFO - Saving mode object
+[2023-05-13 14:58:01,983] root - INFO - Entered the save_object method of utils
+[2023-05-13 14:58:01,986] root - INFO - Exited the save_object method of utils
+[2023-05-13 14:58:01,986] root - INFO - Prepare the artifact
+[2023-05-13 14:58:01,986] root - INFO - Model trainer artifact: ModelTrainerArtifact(model_path='/config/Customer_Segmentation_/artifact/05132023__145746/model_trainer/model/model.pkl')
+[2023-05-13 14:58:02,051] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Model Evaluation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-05-13 14:58:02,051] root - INFO - if saved model folder has model the we will compare which model is best trained or the model from saved model folder

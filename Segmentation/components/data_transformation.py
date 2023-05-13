@@ -45,7 +45,6 @@ class DataTransformation:
                 ('Imputer', simple_imputer),
                 ('RobustScaler', robust_scaler),
             ])
-
             return pipeline
 
         except Exception as e:

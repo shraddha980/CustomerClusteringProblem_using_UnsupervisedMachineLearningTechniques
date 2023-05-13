@@ -5,13 +5,13 @@ import json
 client = pymongo.MongoClient("mongodb+srv://BackOrderPropagation:shraddha123@cluster0.ydatbkn.mongodb.net/?retryWrites=true&w=majority")
 
 
-DATA_FILE_PATH = (r"E:\Customer_Segmenation_Shraddha\bank-additional-full.csv")
+DATA_FILE_PATH = (r"/config/Customer_Segmentation_/bank-additional-full.csv")
 DATABASE_NAME = "CUSTOMERS"
 COLLECTION_NAME = "CUSTOMERS_PROJECT"
  
 
 if __name__ =="__main__":
-    df = pd.read_csv(r"E:\Customer_Segmenation_Shraddha\bank-additional-full.csv", sep=';')
+    df = pd.read_csv(r"/config/Customer_Segmentation_/bank-additional-full.csv", sep=';')
     print(f"Rows and Columns: {df.shape}")
 
     df.reset_index(drop = True, inplace = True)

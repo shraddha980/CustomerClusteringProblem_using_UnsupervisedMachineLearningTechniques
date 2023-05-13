@@ -37,8 +37,8 @@ class ModelEvaluation:
             "which model is best trained or the model from saved model folder")
             latest_dir_path = self.model_resolver.get_latest_dir_path()
             if latest_dir_path==None:
-                model_eval_artifact = artifact_entity.ModelEvaluationArtifact(is_model_accepted=True,
-                improved_accuracy=None)
+                model_eval_artifact = artifact_entity.ModelEvaluationArtifact(is_model_accepted=True)
+                #improved_accuracy=None)
                 logging.info(f"Model evaluation artifact: {model_eval_artifact}")
                 return model_eval_artifact
 
@@ -68,16 +68,16 @@ class ModelEvaluation:
             test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path)
             target_df = test_df[TARGET_COLUMN]
             y_true = target_df
-            # target_encoder.transform(target_df)
+            target_encoder.transform(target_df)
             # accuracy using previous trained model
             
             """We need to create label encoder object for each categorical variable. We will check later"""
             input_feature_name = list(transformer.feature_names_in_)
             for i in input_feature_name:       
                 if test_df[i].dtypes =='object':
-                    test_df[i] =target_encoder.fit_transform(test_df[i])  
+                    test_df[i] = target_encoder.fit_transform(test_df[i])  
 
-            input_arr =transformer.transform(test_df[input_feature_name])
+            input_arr = transformer.transform(test_df[input_feature_name])
             y_pred = model.predict(input_arr)
             print(f"Prediction using previous model: {y_pred[:5]}")
             #previous_model_score = r2_score(y_true=y_true, y_pred=y_pred)
