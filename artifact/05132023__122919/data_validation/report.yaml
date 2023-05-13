@@ -1,0 +1,383 @@
+data_drift_within_test_dataset:
+  age:
+    pvalues: 0.05852415619738949
+    same_distribution: true
+  campaign:
+    pvalues: 0.9999995576428572
+    same_distribution: true
+  cons.conf.idx:
+    pvalues: 0.9864418084407615
+    same_distribution: true
+  cons.price.idx:
+    pvalues: 0.9293029060171633
+    same_distribution: true
+  contact_cellular:
+    pvalues: 0.7458719309717361
+    same_distribution: true
+  contact_telephone:
+    pvalues: 0.7458719309717263
+    same_distribution: true
+  day_of_week_fri:
+    pvalues: 1.0
+    same_distribution: true
+  day_of_week_mon:
+    pvalues: 1.0
+    same_distribution: true
+  day_of_week_thu:
+    pvalues: 0.9999998407540547
+    same_distribution: true
+  day_of_week_tue:
+    pvalues: 0.9999999996093469
+    same_distribution: true
+  day_of_week_wed:
+    pvalues: 0.9999999991285744
+    same_distribution: true
+  default_no:
+    pvalues: 0.8469584552721097
+    same_distribution: true
+  default_unknown:
+    pvalues: 0.8542171066321539
+    same_distribution: true
+  default_yes:
+    pvalues: 1.0
+    same_distribution: true
+  duration:
+    pvalues: 0.8847588563370717
+    same_distribution: true
+  education_basic.4y:
+    pvalues: 1.0
+    same_distribution: true
+  education_basic.6y:
+    pvalues: 1.0
+    same_distribution: true
+  education_basic.9y:
+    pvalues: 1.0
+    same_distribution: true
+  education_high.school:
+    pvalues: 0.9999995722655652
+    same_distribution: true
+  education_illiterate:
+    pvalues: 1.0
+    same_distribution: true
+  education_professional.course:
+    pvalues: 1.0
+    same_distribution: true
+  education_university.degree:
+    pvalues: 0.9607962513962215
+    same_distribution: true
+  education_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  emp.var.rate:
+    pvalues: 0.28118894901541513
+    same_distribution: true
+  euribor3m:
+    pvalues: 0.32248139785745733
+    same_distribution: true
+  housing_no:
+    pvalues: 0.9999999999997301
+    same_distribution: true
+  housing_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  housing_yes:
+    pvalues: 0.9999999997559554
+    same_distribution: true
+  job_admin.:
+    pvalues: 1.0
+    same_distribution: true
+  job_blue-collar:
+    pvalues: 1.0
+    same_distribution: true
+  job_entrepreneur:
+    pvalues: 1.0
+    same_distribution: true
+  job_housemaid:
+    pvalues: 1.0
+    same_distribution: true
+  job_management:
+    pvalues: 0.9999996233843735
+    same_distribution: true
+  job_retired:
+    pvalues: 0.9999959448320769
+    same_distribution: true
+  job_self-employed:
+    pvalues: 1.0
+    same_distribution: true
+  job_services:
+    pvalues: 1.0
+    same_distribution: true
+  job_student:
+    pvalues: 1.0
+    same_distribution: true
+  job_technician:
+    pvalues: 1.0
+    same_distribution: true
+  job_unemployed:
+    pvalues: 1.0
+    same_distribution: true
+  job_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  loan_no:
+    pvalues: 1.0
+    same_distribution: true
+  loan_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  loan_yes:
+    pvalues: 1.0
+    same_distribution: true
+  marital_divorced:
+    pvalues: 1.0
+    same_distribution: true
+  marital_married:
+    pvalues: 1.0
+    same_distribution: true
+  marital_single:
+    pvalues: 1.0
+    same_distribution: true
+  marital_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  month_apr:
+    pvalues: 1.0
+    same_distribution: true
+  month_aug:
+    pvalues: 1.0
+    same_distribution: true
+  month_dec:
+    pvalues: 1.0
+    same_distribution: true
+  month_jul:
+    pvalues: 0.9092845286710463
+    same_distribution: true
+  month_jun:
+    pvalues: 0.9999885426474352
+    same_distribution: true
+  month_mar:
+    pvalues: 1.0
+    same_distribution: true
+  month_may:
+    pvalues: 0.25465532491326315
+    same_distribution: true
+  month_nov:
+    pvalues: 1.0
+    same_distribution: true
+  month_oct:
+    pvalues: 1.0
+    same_distribution: true
+  month_sep:
+    pvalues: 1.0
+    same_distribution: true
+  nr.employed:
+    pvalues: 0.28118894901541513
+    same_distribution: true
+  pdays:
+    pvalues: 1.0
+    same_distribution: true
+  poutcome_failure:
+    pvalues: 1.0
+    same_distribution: true
+  poutcome_nonexistent:
+    pvalues: 1.0
+    same_distribution: true
+  poutcome_success:
+    pvalues: 1.0
+    same_distribution: true
+  previous:
+    pvalues: 1.0
+    same_distribution: true
+data_drift_within_train_dataset:
+  age:
+    pvalues: 0.9710847516869764
+    same_distribution: true
+  campaign:
+    pvalues: 1.0
+    same_distribution: true
+  cons.conf.idx:
+    pvalues: 1.0
+    same_distribution: true
+  cons.price.idx:
+    pvalues: 0.9999999999995172
+    same_distribution: true
+  contact_cellular:
+    pvalues: 0.9999999747510258
+    same_distribution: true
+  contact_telephone:
+    pvalues: 0.9999999747510258
+    same_distribution: true
+  day_of_week_fri:
+    pvalues: 1.0
+    same_distribution: true
+  day_of_week_mon:
+    pvalues: 1.0
+    same_distribution: true
+  day_of_week_thu:
+    pvalues: 1.0
+    same_distribution: true
+  day_of_week_tue:
+    pvalues: 1.0
+    same_distribution: true
+  day_of_week_wed:
+    pvalues: 1.0
+    same_distribution: true
+  default_no:
+    pvalues: 0.9999999996899221
+    same_distribution: true
+  default_unknown:
+    pvalues: 0.9999999997949882
+    same_distribution: true
+  default_yes:
+    pvalues: 1.0
+    same_distribution: true
+  duration:
+    pvalues: 0.9999999999718867
+    same_distribution: true
+  education_basic.4y:
+    pvalues: 1.0
+    same_distribution: true
+  education_basic.6y:
+    pvalues: 1.0
+    same_distribution: true
+  education_basic.9y:
+    pvalues: 1.0
+    same_distribution: true
+  education_high.school:
+    pvalues: 1.0
+    same_distribution: true
+  education_illiterate:
+    pvalues: 1.0
+    same_distribution: true
+  education_professional.course:
+    pvalues: 1.0
+    same_distribution: true
+  education_university.degree:
+    pvalues: 0.9999999999999961
+    same_distribution: true
+  education_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  emp.var.rate:
+    pvalues: 0.9993887865975412
+    same_distribution: true
+  euribor3m:
+    pvalues: 0.9996878811473646
+    same_distribution: true
+  housing_no:
+    pvalues: 1.0
+    same_distribution: true
+  housing_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  housing_yes:
+    pvalues: 1.0
+    same_distribution: true
+  job_admin.:
+    pvalues: 1.0
+    same_distribution: true
+  job_blue-collar:
+    pvalues: 1.0
+    same_distribution: true
+  job_entrepreneur:
+    pvalues: 1.0
+    same_distribution: true
+  job_housemaid:
+    pvalues: 1.0
+    same_distribution: true
+  job_management:
+    pvalues: 1.0
+    same_distribution: true
+  job_retired:
+    pvalues: 1.0
+    same_distribution: true
+  job_self-employed:
+    pvalues: 1.0
+    same_distribution: true
+  job_services:
+    pvalues: 1.0
+    same_distribution: true
+  job_student:
+    pvalues: 1.0
+    same_distribution: true
+  job_technician:
+    pvalues: 1.0
+    same_distribution: true
+  job_unemployed:
+    pvalues: 1.0
+    same_distribution: true
+  job_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  loan_no:
+    pvalues: 1.0
+    same_distribution: true
+  loan_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  loan_yes:
+    pvalues: 1.0
+    same_distribution: true
+  marital_divorced:
+    pvalues: 1.0
+    same_distribution: true
+  marital_married:
+    pvalues: 1.0
+    same_distribution: true
+  marital_single:
+    pvalues: 1.0
+    same_distribution: true
+  marital_unknown:
+    pvalues: 1.0
+    same_distribution: true
+  month_apr:
+    pvalues: 1.0
+    same_distribution: true
+  month_aug:
+    pvalues: 1.0
+    same_distribution: true
+  month_dec:
+    pvalues: 1.0
+    same_distribution: true
+  month_jul:
+    pvalues: 0.9999999999961959
+    same_distribution: true
+  month_jun:
+    pvalues: 1.0
+    same_distribution: true
+  month_mar:
+    pvalues: 1.0
+    same_distribution: true
+  month_may:
+    pvalues: 0.9990631492359074
+    same_distribution: true
+  month_nov:
+    pvalues: 1.0
+    same_distribution: true
+  month_oct:
+    pvalues: 1.0
+    same_distribution: true
+  month_sep:
+    pvalues: 1.0
+    same_distribution: true
+  nr.employed:
+    pvalues: 0.9993887865975412
+    same_distribution: true
+  pdays:
+    pvalues: 1.0
+    same_distribution: true
+  poutcome_failure:
+    pvalues: 1.0
+    same_distribution: true
+  poutcome_nonexistent:
+    pvalues: 1.0
+    same_distribution: true
+  poutcome_success:
+    pvalues: 1.0
+    same_distribution: true
+  previous:
+    pvalues: 1.0
+    same_distribution: true
+missing_values_within_base_dataset: []
+missing_values_within_test_dataset: []
+missing_values_within_train_dataset: []

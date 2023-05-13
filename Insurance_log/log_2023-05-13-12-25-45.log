@@ -1,0 +1,19 @@
+[2023-05-13 12:25:46,234] numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[2023-05-13 12:25:55,848] root - INFO - Exporting collection data as pandas dataframe
+[2023-05-13 12:25:55,848] root - INFO - Reading data from database: CUSTOMERS and collection: CUSTOMERS_PROJECT
+[2023-05-13 12:26:02,802] root - INFO - Found columns: Index(['_id', 'age', 'job', 'marital', 'education', 'default', 'housing',
+       'loan', 'contact', 'month', 'day_of_week', 'duration', 'campaign',
+       'pdays', 'previous', 'poutcome', 'emp.var.rate', 'cons.price.idx',
+       'cons.conf.idx', 'euribor3m', 'nr.employed', 'y'],
+      dtype='object')
+[2023-05-13 12:26:02,802] root - INFO - Dropping column: _id 
+[2023-05-13 12:26:02,849] root - INFO - Row and columns in df: (82376, 21)
+[2023-05-13 12:26:02,849] root - INFO - Save data in feature store
+[2023-05-13 12:26:02,922] root - INFO - Create feature store folder if not available
+[2023-05-13 12:26:02,922] root - INFO - Save df to feature store folder
+[2023-05-13 12:26:05,243] root - INFO - split dataset into train and test set
+[2023-05-13 12:26:05,317] root - INFO - create dataset directory folder if not available
+[2023-05-13 12:26:05,317] root - INFO - Save df to feature store folder
+[2023-05-13 12:26:07,758] root - INFO - Data ingestion artifact: DataIngestionArtifact(feature_store_file_path='E:\\Customer_Segmenation_Shraddha\\artifact\\05132023__122555\\data_ingestion\\feature_store\\bank-additional-full.csv', train_file_path='E:\\Customer_Segmenation_Shraddha\\artifact\\05132023__122555\\data_ingestion\\dataset\\train.csv', test_file_path='E:\\Customer_Segmenation_Shraddha\\artifact\\05132023__122555\\data_ingestion\\dataset\\test.csv')
+[2023-05-13 12:26:08,038] root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2023-05-13 12:26:08,038] root - INFO - Reading base dataframe
