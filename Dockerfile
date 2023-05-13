@@ -11,5 +11,5 @@ RUN airflow db init
 RUN airflow users create  -e shraddhawork45@gmail.com -f Shraddha -l Sawant -p admin -r Admin  -u admin
 RUN chmod 777 start.sh
 RUN apt update -y && apt install awscli -y
-ENTRYPOINT [ "/bin/sh" ]
+ENTRYPOINT [ "~/bin/sh" ]
 CMD ["start.sh"]
