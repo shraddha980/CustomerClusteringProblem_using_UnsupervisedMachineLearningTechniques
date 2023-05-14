@@ -1,7 +1,7 @@
 version: "2"
 services:
  application:
-    image: ${IMAGE_NAME}
+    image: ${IMAGE_TAG}
     container_name: customer_segmentation_repository
     ports:
       - "8080:8080"
