@@ -23,7 +23,7 @@ class DataIngestion:
             df:pd.DataFrame  = utils.get_collection_as_dataframe(
                 database_name=self.data_ingestion_config.database_name, 
                 collection_name=self.data_ingestion_config.collection_name)
-
+            df = df.iloc[:5000]
             logging.info("Save data in feature store")
 
             #replace na with Nan
